@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Armazenamento de dados da loja ABC</h3>
+            
+
+            <div id="boxForm" style="display: block;">
+                <div id="clientebox">
+                    <div class="costumn-box">
+                        <h3>Cadastro de Cliente</h3>
+                        <label for="nomeCliente">Digite o nome completo do cliente:</label>
+                        <input type="text" id="nomeCliente" placeholder="Digite o nome completo...">
+                        <label for="dataNascimento">Data de nascimento:</label>
+                        <input type="date" id="dataNascimento" name="nascimento" min="1900-12-31" max="2015-12-31" /><br />
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" placeholder="Digite o CPF...">
+                        <label for="tipoOrigem">Origem(se o cadastro é de origem da Loja ou Site)</label>
+                        <select id="tipoOrigem">
+                            <option value="loja">Loja</option>
+                            <option value="site">Site</option>
+                        </select>
+                        <label for="score">Score:</label>
+                        <input type="number" min="0" id="score" placeholder="Digite o score do cliente...">
+                    </div>
+                </div>
+                <div class="costumn-box">
+                    <h3>Categoria</h3>
+                    <label for="categoria">Nome:</label>
+                    <input type="text" id="categoria" placeholder="Digite o nome da categoria....">
+                </div>
+                <div class="costumn-box">
+                    <h3>Vendedor</h3>
+                    <label for="nomeVendedor">Nome:</label>
+                    <input type="text" id="nomeVendedor" placeholder="Digite o nome do vendedor...">
+                    <label for="matricula">Número da matrícula</label>
+                    <input type="number" id="matricula" placeholder="Digite o número...">
+                </div>
+                <div class="costumn-box">
+                    <h3>Pedido</h3>
+                    <label for="clientePedido">Cliente:</label>
+                    <input type="text" id="clientePedido" placeholder="Digite o nome do cliente...">
+                    <label for="dataPedido">Data de criação do pedido:</label>
+                    <input type="date" id="dataPedido" name="dataPedido" min="2021-01-31" max="2025-12-31" />
+                    <label for="vendedorPedido">Digite o número da matricula do vendedor:</label>
+                    <input type="number" id="vendedorPedido" placeholder="Digite o número...">
+                    <label for="valorProduto">Valor do produto:</label>
+                    <input type="number" min="0" placeholder="Digite o valor do produto..." id="valorProduto">
+                </div>
+                <button onclick="adicionarCliente()">Cadastrar Dados</button>
+            </div>
+            <div id="boxInfo" style="display: none;" >
+                <div class="costumn-box">
+                    <h3>Dados Cadastrados</h3>
+                    <p id="exibir"></p>
+                    <button onclick="continuarCadastrando()">Continuar cadastrando</button>
+                    <button onclick="finalizar()">Finalizar Sistema</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
